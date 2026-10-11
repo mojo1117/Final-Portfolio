@@ -9,22 +9,42 @@
     position: fixed;
     inset: 0 0 auto 0;
     z-index: 100;
+
     display: flex;
     justify-content: space-between;
     align-items: center;
+
+    width: 100%;
+    max-width: 1460px;
+    margin-top: 20px;
     padding: 15px 30px;
+
+    left: 50%;
+    transform: translateX(-50%);
+    
+    
+}
+
+.nav-links a span {
+    display: inline-block;
+    transition: transform 0.3s ease;
+}
+
+.nav-links a:hover span {
+    transform: translateY(-5px);
 }
 
 .nav-links {
     display: flex;
     list-style: none;
-    gap: 30px;
+    gap: 50px;
 }
 
 .nav-links a {
+    display: inline-block;
     color: black;
     text-decoration: none;
-    font-size: 15px;
+    font-size: 17px;
 }
 
 html {
@@ -38,7 +58,7 @@ body {
 #email2 {
     color: white;
     border-radius: 5px;
-    padding: 5px 10px;
+    padding: 8px 15px;
     background-color: black;
     transition: padding .3s, box-shadow .3s;
 }
@@ -62,7 +82,7 @@ body {
 }
 
 .hero-hello,
-.hero-location {
+.hero-description {
     font-size:20px;
     font-weight: 300;
 }
@@ -115,4 +135,44 @@ body {
 
 .headline-word:nth-child(2):hover {
     color: black;
+}
+
+.social-links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+    margin-top: 0rem;
+
+}
+
+.social-links a {
+    display: block;
+    width: 65px;
+    height: 65px;
+    flex-shrink: 0;
+    transition: transform 0.3s ease;
+}
+
+.social-links img {
+    display: block;
+    width: 30px;
+    height: 30px;
+    object-fit: contain;
+}
+
+.social-links a:hover {
+    transform: translateY(-5px) scale(1.05);
+}
+
+
+@media (max-width: 600px) {
+    .social-links {
+        gap: 15px;
+    }
+
+    .social-links a {
+        width: 15px;
+        height: 15px;
+    }
 }
