@@ -1,0 +1,118 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+.navbar {
+    position: fixed;
+    inset: 0 0 auto 0;
+    z-index: 100;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+}
+
+.nav-links a {
+    color: black;
+    text-decoration: none;
+    font-size: 15px;
+}
+
+html {
+    font-size: clamp(12px, 1.5vw, 18px);
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+}
+
+#email2 {
+    color: white;
+    border-radius: 5px;
+    padding: 5px 10px;
+    background-color: black;
+    transition: padding .3s, box-shadow .3s;
+}
+
+#email2:hover {
+    padding-left: 2rem;
+    padding-right: 2rem;
+    box-shadow: 0 1rem 2rem rgba(27,27,27,.15);
+}
+
+.hero {
+    min-height: 70vh;
+    padding: 9rem 5rem 4rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    transform: translateY(-30px);
+    align-items: center;
+
+    
+}
+
+.hero-hello,
+.hero-location {
+    font-size:20px;
+    font-weight: 300;
+}
+
+.hero-hello {
+    align-self: stretch;
+    text-align: center;
+}
+
+.hero-location {
+    width: 100%;
+    text-align: left;
+}
+
+.headline {
+    font-family: 'Anton', sans-serif;
+    width: 100%;
+    position: relative;
+    flex-direction: column;
+    font-size: 9rem;
+    font-weight: 500;
+    line-height: 1;
+    letter-spacing: -0.03em;
+    margin: .5rem 0;
+    text-align: center;
+    
+}
+
+.headline-word {
+    
+    display: block;
+    font-size: inherit;
+    font-family: inherit;
+    font-weight: inherit;
+    line-height: inherit;
+    color: black;
+    -webkit-text-stroke: 1px black;
+    transition: color .4s ease;
+    text-decoration: none;
+}
+
+.headline:has(.headline-word:hover) .headline-word:not(:hover),
+.headline:has(.headline-word:focus-visible) .headline-word:not(:focus-visible) {
+    color: transparent;
+}
+
+.headline-word:nth-child(2) {
+    color: transparent;
+}
+
+.headline-word:nth-child(2):hover {
+    color: black;
+}
