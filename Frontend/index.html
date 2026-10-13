@@ -1,74 +1,92 @@
 <!DOCTYPE html>
-
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Macus Portfolio</title>
-        <link rel="stylesheet" href="style.css">
-        <script src="script.js" defer></script>
-        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
-        <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
-    </head>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Macus Portfolio</title>
 
-    <body>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
 
-        <nav class="navbar">
+    <noscript>
+        <style>
+            .preloader { display: none; }
+            body:not(.is-loaded) { overflow: auto; }
+            .reveal, .headline-word, main { opacity: 1; transform: none; }
+        </style>
+    </noscript>
+</head>
 
-            <div class="logo">
-                    <a href="#home" class="logo-link"> 
-                        <img src="assets/images/logo.png" alt="logo" width="150" height="50">
-                    </a>
-            </div>
+<body>
 
-            <ul class="nav-links">
-                
-                <li> <a href="#Projects"> <span>Projects</span> </a></li>
-                <li> <a href="#About"> <span> About </span> </a></li>
-                <li> <a href="#Contact"> <span> Contact </span> </a></li>
-                <li> <a href="mailto:macuslumbis5@gmail.com" class="email" id="email2"> macuslumbis5@gmail.com </a></li>
-            </ul>
-        </nav>
+    <div class="preloader" aria-hidden="true">
+        <div class="preloader-panel preloader-panel--a"></div>
+        <div class="preloader-panel preloader-panel--b"></div>
+        <span class="preloader-logo"><img src="assets/images/logowhite.png" alt="logo" width="200" height="100"></span>
+    </div>
 
-        <main id="home">
-            <section class="hero">
-                <p class="hero-hello">👋 Hi, I'm Macus and I'm a </p>
-
-                <div class = "hero-content">
-
-                    <h1 class="headline">
-                        <a href="#projects" class="headline-word"> WebDeveloper </a>
-                        <a href="#projects" class="headline-word"> &Content Creator</a>
-                    </h1>
-                
-                
-
-                    <p class = "hero-description"> Developer, based in the Philippines</p>
-                </div>
-            </section>
-        </main>
-
-        <div class = "social-links">
-            <a href = "https://www.facebook.com/macus.lumbis" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
-                <img src="assets/icons/facebook.png" alt="Facebook">
-            </a>
-
-            <a href = "https://www.linkedin.com/in/macus-lumbis-49733b410" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
-                <img src="assets/icons/linkedin.png" alt="LinkedIn">
-            </a>
-
-            <a href = "https://github.com/mojo1117" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
-                <img src="assets/icons/github.png" alt="GitHub">
-            </a>
-
-            <a href = "https://www.instagram.com/mjocatt/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
-                <img src="assets/icons/instagram.png" alt="Instagram">
+    <nav class="navbar">
+        <div class="logo reveal" style="--i:0">
+            <a href="index.html" class="logo-link">
+                <img src="assets/images/logo.png" alt="logo" width="150" height="50">
             </a>
         </div>
 
+        <ul class="nav-links reveal" style="--i:1">
+            <li><a href="projects.html"><span>Projects</span></a></li>
+            <li><a href="#about"><span>About</span></a></li>
+            <li><a href="#contact"><span>Contact</span></a></li>
+            <li><a href="mailto:macuslumbis5@gmail.com" class="email" id="email2">macuslumbis5@gmail.com</a></li>
+        </ul>
+    </nav>
 
+    <main id="home">
+        <section class="hero">
+            <p class="hero-hello reveal" style="--i:0">👋 Hi, I'm Macus and I'm a</p>
 
+            <div class="hero-content">
+                <h1 class="headline">
+                    <span class="headline-line">
+                        <a href="#projects" class="headline-word" style="--i:1">WebDeveloper</a>
+                    </span>
+                    <span class="headline-line">
+                        <a href="#projects" class="headline-word" style="--i:2">&amp; Content Creator</a>
+                    </span>
+                </h1>
 
+                <p class="hero-description reveal" style="--i:3">Developer, based in the Philippines</p>
+            </div>
+        </section>
+    </main>
 
-    </body>
+    <div class="social-links reveal" style="--i:4">
+        <a href="https://www.facebook.com/macus.lumbis" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+            <img src="assets/icons/facebook.png" alt="Facebook">
+        </a>
+
+        <a href="https://www.linkedin.com/in/macus-lumbis-49733b410" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+            <img src="assets/icons/linkedin.png" alt="LinkedIn">
+        </a>
+
+        <a href="https://github.com/mojo1117" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+            <img src="assets/icons/github.png" alt="GitHub">
+        </a>
+
+        <a href="https://www.instagram.com/mjocatt/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+            <img src="assets/icons/instagram.png" alt="Instagram">
+        </a>
+    </div>
+    <div class="cursor" aria-hidden="true">
+    <div class="cursor__circle">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+             stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M6 18L18 6M8 6h10v10"/>
+        </svg>
+    </div>
+</div>
+</div>
+
+</body>
 </html>

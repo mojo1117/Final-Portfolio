@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects | Macus Portfolio</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="projects.css">
+    <script src="script.js" defer></script>
+    <script src="projects.js" defer></script>
+
+    <noscript>
+        <style>
+            .preloader { display: none; }
+            body:not(.is-loaded) { overflow: auto; }
+            .reveal, .headline-word, main { opacity: 1; transform: none; }
+        </style>
+    </noscript>
+</head>
+
+<body>
+
+    <div class="preloader" aria-hidden="true">
+        <div class="preloader-panel preloader-panel--a"></div>
+        <div class="preloader-panel preloader-panel--b"></div>
+        <span class="preloader-logo">Macus</span>
+    </div>
+
+    <nav class="navbar">
+        <div class="logo reveal" style="--i:0">
+            <a href="index.html" class="logo-link">
+                <img src="assets/images/logo.png" alt="logo" width="150" height="50">
+            </a>
+        </div>
+
+        <ul class="nav-links reveal" style="--i:1">
+            <li><a href="projects.html" aria-current="page"><span>Projects</span></a></li>
+            <li><a href="index.html#about"><span>About</span></a></li>
+            <li><a href="index.html#contact"><span>Contact</span></a></li>
+            <li><a href="mailto:macuslumbis5@gmail.com" class="email" id="email2">macuslumbis5@gmail.com</a></li>
+        </ul>
+    </nav>
+
+    <main id="top">
+        <header class="page-head">
+            <p class="eyebrow reveal" style="--i:0">Portfolio</p>
+
+            <h1 class="headline">
+                <span class="headline-line">
+                    <a href="#projects" class="headline-word" style="--i:1">Selected</a>
+                </span>
+                <span class="headline-line">
+                    <a href="#projects" class="headline-word" style="--i:2">Work</a>
+                </span>
+            </h1>
+
+            <p class="page-head__intro reveal" style="--i:3">
+                A collection of websites, designs and content I have built. Pick a category or open any card for the full story.
+            </p>
+        </header>
+
+        <div class="toolbar reveal" style="--i:4">
+            <div class="filters" role="group" aria-label="Filter projects">
+                <button class="filter is-active" type="button" data-filter="all" aria-pressed="true">All</button>
+                <button class="filter" type="button" data-filter="web" aria-pressed="false">Web</button>
+                <button class="filter" type="button" data-filter="design" aria-pressed="false">Design</button>
+                <button class="filter" type="button" data-filter="content" aria-pressed="false">Content</button>
+            </div>
+            <p class="count" id="count" aria-live="polite"></p>
+        </div>
+
+        <section class="projects" id="projects" aria-label="Projects">
+            <div class="grid" id="grid"></div>
+            <noscript><p class="noscript">Please enable JavaScript to view the projects.</p></noscript>
+        </section>
+    </main>
+
+    <footer class="footer" id="contact">
+        <p class="footer__lead">Have a project in mind?</p>
+        <a class="footer__mail" href="mailto:macuslumbis5@gmail.com">macuslumbis5@gmail.com</a>
+
+        <div class="social-links">
+            <a href="https://www.facebook.com/macus.lumbis" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+                <img src="assets/icons/facebook.png" alt="Facebook">
+            </a>
+            <a href="https://www.linkedin.com/in/macus-lumbis-49733b410" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+                <img src="assets/icons/linkedin.png" alt="LinkedIn">
+            </a>
+            <a href="https://github.com/mojo1117" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+                <img src="assets/icons/github.png" alt="GitHub">
+            </a>
+            <a href="https://www.instagram.com/mjocatt/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+                <img src="assets/icons/instagram.png" alt="Instagram">
+            </a>
+        </div>
+
+        <p class="footer__small">&copy; <span id="year"></span> Macus. Built by hand with HTML, CSS and JavaScript.</p>
+    </footer>
+
+    <dialog class="modal" id="modal" aria-labelledby="modal-title">
+        <div class="modal__panel">
+            <button class="modal__close" id="modal-close" type="button" aria-label="Close">&times;</button>
+            <div class="modal__media" id="modal-media"></div>
+            <div class="modal__body">
+                <p class="modal__meta" id="modal-meta"></p>
+                <h2 class="modal__title" id="modal-title"></h2>
+                <p class="modal__text" id="modal-text"></p>
+                <ul class="chips" id="modal-stack"></ul>
+                <div class="modal__links" id="modal-links"></div>
+            </div>
+        </div>
+    </dialog>
+
+    <div class="cursor" aria-hidden="true">
+        <div class="cursor__circle">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M6 18L18 6M8 6h10v10"/>
+            </svg>
+        </div>
+    </div>
+
+</body>
+</html>
