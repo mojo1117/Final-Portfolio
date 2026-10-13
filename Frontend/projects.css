@@ -556,4 +556,57 @@ body.modal-open {
     }
 }
 
+.project-card__img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 1.1s var(--ease);
+}
+
+.project-card:hover .project-card__img {
+    transform: scale(1.07);
+}
+
+.project-card__media.has-image::after {
+    background: linear-gradient(to top, rgba(27, 27, 27, .5), transparent 55%);
+}
+
+.project-card:hover .project-card__media.has-image::after {
+    transform: none;
+}
+
+.project-card__media.has-image .project-card__num {
+    font-size: 3rem;
+    color: #fff;
+    -webkit-text-stroke: 0;
+    text-shadow: 0 .15rem .6rem rgba(27, 27, 27, .5);
+}
+
+.project-card__media.has-image .project-card__arrow {
+    display: grid;
+    place-items: center;
+    width: 2.8rem;
+    height: 2.8rem;
+    font-size: 1.4rem;
+    background: #fff;
+    border: 2px solid var(--ink);
+    border-radius: 50%;
+}
+
+.modal__media.has-image {
+    min-height: 22rem;
+    background: var(--img) center / cover no-repeat, linear-gradient(135deg, var(--c1), var(--c2));
+    font-size: 3rem;
+    color: #fff;
+    -webkit-text-stroke: 0;
+    text-shadow: 0 .15rem .6rem rgba(27, 27, 27, .5);
+}
+
+@media (max-width: 700px) {
+    .modal__media.has-image {
+        min-height: 13rem;
+    }
+}
 

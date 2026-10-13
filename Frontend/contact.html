@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact | Macus Portfolio</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="contact.css">
+    <script src="script.js" defer></script>
+    <script src="contact.js" defer></script>
+
+    <noscript>
+        <style>
+            .preloader { display: none; }
+            body:not(.is-loaded) { overflow: auto; }
+            .reveal, .headline-word, main { opacity: 1; transform: none; }
+        </style>
+    </noscript>
+</head>
+
+<body>
+
+    <div class="preloader" aria-hidden="true">
+        <div class="preloader-panel preloader-panel--a"></div>
+        <div class="preloader-panel preloader-panel--b"></div>
+        <span class="preloader-logo">Macus</span>
+    </div>
+
+    <nav class="navbar">
+        <div class="logo reveal" style="--i:0">
+            <a href="index.html" class="logo-link">
+                <img src="assets/images/logo.png" alt="logo" width="150" height="50">
+            </a>
+        </div>
+
+        <ul class="nav-links reveal" style="--i:1">
+            <li><a href="projects.html"><span>Projects</span></a></li>
+            <li><a href="contact.html" aria-current="page"><span>Contact</span></a></li>
+            <li><a href="mailto:macuslumbis5@gmail.com" class="email" id="email2">macuslumbis5@gmail.com</a></li>
+        </ul>
+    </nav>
+
+    <main id="top">
+        <header class="contact-head">
+            <p class="eyebrow reveal" style="--i:0">Contact</p>
+
+            <h1 class="headline">
+                <span class="headline-line">
+                    <a href="#form" class="headline-word" style="--i:1">Let&rsquo;s</a>
+                </span>
+                <span class="headline-line">
+                    <a href="#form" class="headline-word" style="--i:2">Talk</a>
+                </span>
+            </h1>
+
+            <p class="contact-head__intro reveal" style="--i:3">
+                Have a website, design or content project in mind? Tell me a little about it and I will get back to you.
+            </p>
+        </header>
+
+        <section class="contact-grid">
+            <aside class="info reveal" style="--i:4" aria-label="Contact details">
+                <div class="info__block">
+                    <h2 class="info__label">Email</h2>
+                    <a class="info__mail" href="mailto:macuslumbis5@gmail.com">macuslumbis5@gmail.com</a>
+                    <button class="copy" id="copy" type="button">Copy email</button>
+                </div>
+
+                <div class="info__block">
+                    <h2 class="info__label">Based in</h2>
+                    <p class="info__value">The Philippines</p>
+                    <p class="info__small">
+                        <span class="dot" id="dot"></span>
+                        <span id="clock">--:--</span> local time
+                        <span id="availability"></span>
+                    </p>
+                </div>
+
+                <div class="info__block">
+                    <h2 class="info__label">Response time</h2>
+                    <p class="info__value">Within 24 hours</p>
+                </div>
+
+                <div class="info__block">
+                    <h2 class="info__label">Elsewhere</h2>
+                    <div class="social-links">
+                        <a href="https://www.facebook.com/macus.lumbis" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+                            <img src="assets/icons/facebook.png" alt="Facebook">
+                        </a>
+                        <a href="https://www.linkedin.com/in/macus-lumbis-49733b410" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+                            <img src="assets/icons/linkedin.png" alt="LinkedIn">
+                        </a>
+                        <a href="https://github.com/mojo1117" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+                            <img src="assets/icons/github.png" alt="GitHub">
+                        </a>
+                        <a href="https://www.instagram.com/mjocatt/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+                            <img src="assets/icons/instagram.png" alt="Instagram">
+                        </a>
+                    </div>
+                </div>
+            </aside>
+
+            <form class="form reveal" style="--i:5" id="form" novalidate>
+                <div class="field">
+                    <label for="name">Your name</label>
+                    <input id="name" name="name" type="text" autocomplete="name" maxlength="80" required aria-describedby="name-error">
+                    <p class="error" id="name-error" aria-live="polite"></p>
+                </div>
+
+                <div class="field">
+                    <label for="email">Your email</label>
+                    <input id="email" name="email" type="email" autocomplete="email" maxlength="120" required aria-describedby="email-error">
+                    <p class="error" id="email-error" aria-live="polite"></p>
+                </div>
+
+                <fieldset class="field">
+                    <legend>What is this about?</legend>
+                    <div class="topics">
+                        <label class="topic"><input type="radio" name="topic" value="Website" checked><span>Website</span></label>
+                        <label class="topic"><input type="radio" name="topic" value="Design"><span>Design</span></label>
+                        <label class="topic"><input type="radio" name="topic" value="Content"><span>Content</span></label>
+                        <label class="topic"><input type="radio" name="topic" value="Other"><span>Other</span></label>
+                    </div>
+                </fieldset>
+
+                <div class="field">
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" rows="6" maxlength="1000" required aria-describedby="message-error message-count"></textarea>
+                    <div class="field__foot">
+                        <p class="error" id="message-error" aria-live="polite"></p>
+                        <p class="counter" id="message-count">0 / 1000</p>
+                    </div>
+                </div>
+
+                <div class="honeypot" aria-hidden="true">
+                    <label>Leave this field empty
+                        <input type="text" name="company" id="company" tabindex="-1" autocomplete="off">
+                    </label>
+                </div>
+
+                <button class="submit" id="submit" type="submit">
+                    <span class="submit__label">Send message</span>
+                    <span class="submit__arrow" aria-hidden="true">&nearr;</span>
+                </button>
+
+                <p class="status" id="status" role="status" aria-live="polite"></p>
+            </form>
+        </section>
+    </main>
+
+    <footer class="contact-footer">
+        <p>&copy; <span id="year"></span> Macus. Built with HTML, CSS, JS, and Formspree.</p>
+    </footer>
+
+    <div class="cursor" aria-hidden="true">
+        <div class="cursor__circle">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M6 18L18 6M8 6h10v10"/>
+            </svg>
+        </div>
+    </div>
+
+</body>
+</html>

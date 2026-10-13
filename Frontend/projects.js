@@ -5,11 +5,13 @@ const projects = [
         category: 'web',
         year: 2026,
         colors: ['#fda228', '#fc3e6b'],
+        image: 'assets/portfolio/portfolio.png',
+        alt: 'Homepage of Portfolio',
         summary: 'A hand-coded portfolio.',
         description: 'Built from scratch with plain HTML, CSS and JavaScript.',
         stack: ['HTML', 'CSS', 'JavaScript'],
         live: '',
-        code: ''
+        code: 'https://github.com/mojo1117/Final-Portfolio'
     },
     {
         id: 2,
@@ -17,6 +19,8 @@ const projects = [
         category: 'content',
         year: 2026,
         colors: ['#1daafc', '#7b61ff'],
+        image: 'assets/portfolio/auto.png',
+        alt: 'Youtube Porfile of Poncat',
         summary: 'First youtube automation channel that focuses on cat videos',
         description: 'First youtube automation channel that focuses on cat videos. Has about 1.24k subs. All videos were edited with CapCut.',
         stack: ['HTML', 'CSS', 'JavaScript', 'Responsive'],
@@ -73,10 +77,16 @@ function observeCards() {
 
 function cardTemplate(project, index) {
     const tags = project.stack.slice(0, 3).map((item) => `<li>${item}</li>`).join('');
+    const hasImage = Boolean(project.image);
+
+    const image = hasImage
+        ? `<img class="project-card__img" src="${project.image}" alt="${project.alt || project.title}" width="1600" height="1000" loading="lazy" decoding="async" onerror="this.parentElement.classList.remove('has-image');this.remove()">`
+        : '';
 
     return `
-        <article class="project-card is-visible" style="--c1:${project.colors[0]};--c2:${project.colors[1]};--d:${index}">
-            <div class="project-card__media">
+        <article class="project-card" style="--c1:${project.colors[0]};--c2:${project.colors[1]};--d:${index}">
+            <div class="project-card__media${hasImage ? ' has-image' : ''}">
+                ${image}
                 <span class="project-card__num">${pad(project.id)}</span>
                 <span class="project-card__arrow" aria-hidden="true">&nearr;</span>
             </div>
@@ -107,6 +117,8 @@ function openModal(id) {
 
     modalMedia.style.setProperty('--c1', project.colors[0]);
     modalMedia.style.setProperty('--c2', project.colors[1]);
+    modalMedia.style.setProperty('--img', project.image ? `url("${project.image}")` : 'none');
+    modalMedia.classList.toggle('has-image', Boolean(project.image));
     modalMedia.textContent = pad(project.id);
     modalMeta.textContent = `${labels[project.category]} · ${project.year}`;
     modalTitle.textContent = project.title;
