@@ -23,7 +23,7 @@ const projects = [
         alt: 'Youtube Porfile of Poncat',
         summary: 'First youtube automation channel that focuses on cat videos',
         description: 'First youtube automation channel that focuses on cat videos. Has about 1.24k subs. All videos were edited with CapCut.',
-        stack: ['HTML', 'CSS', 'JavaScript', 'Responsive'],
+        stack: ['Capcut', 'Youtube', 'Content'],
         live: 'https://www.youtube.com/@poncat21',
         code: ''
     },
